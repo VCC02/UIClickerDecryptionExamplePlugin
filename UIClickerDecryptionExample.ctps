@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="93"/>
+        <CursorPos X="54" Y="110"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\UIClicker\ClickerUtils\ClickerActionPlugins.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\UIClicker\ClickerUtils\ClickerUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\UIClicker\ClickerClient\DllUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_DCP\source\dcprijndael.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="DCPrijndael"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="104"/>
+        <CursorPos X="26" Y="122"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_DCP\source\dcpcrypt2.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="DCPcrypt2"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="672"/>
+        <CursorPos X="14" Y="225"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_DCP\source\dcpblockciphers.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="DCPblockciphers"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="501"/>
+        <CursorPos X="41" Y="505"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="20">
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="14" Column="44"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="10" Column="48"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="11" Column="32"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="9" Column="14"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="108" Column="26" TopLine="96"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="108" Column="28" TopLine="94"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="112" Column="21" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="111" Column="23" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="125" Column="15" TopLine="97"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="115" Column="38" TopLine="101"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="102" Column="5" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="98" Column="65" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="96" Column="40" TopLine="91"/>
+      </Position>
+      <Position>
+        <Filename Value="UIClickerDecryptionExample.ppr"/>
+        <Caret Line="102" Column="42" TopLine="91"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
