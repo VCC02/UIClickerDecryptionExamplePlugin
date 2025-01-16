@@ -29,7 +29,7 @@ library UIClickerDecryptionExample;
 uses
   Windows,
   Interfaces, Classes, SysUtils,// Graphics, HashingExampleDM, ImgList,
-  ClickerActionPlugins, ClickerUtils, DllUtils,
+  ClickerActionPlugins, ClickerUtils, DllUtils, ClickerPluginInMemFileSystem,
   DCPrijndael
   ;
 
@@ -116,6 +116,11 @@ begin
 end;
 
 
+var
+  FKey: string;
+  FKeySet: Boolean = False;
+
+
 function ProcessMemoryContent(AInData: Pointer; AInDataLen: Int64; AOnFileContent: TOnFileContentObj): Integer; cdecl;
 var
   AES: TDCP_rijndael;
@@ -128,6 +133,12 @@ begin
   AES := TDCP_rijndael.Create(nil);
   try
     FillChar(Key, Length(Key), 0);
+    if FKeySet then
+    begin
+      Move(FKey[1], Key, Length(Key));
+      FillChar(FKey[1], Length(FKey), '0');
+    end;
+
     AES.Init(Key, Length(Key) shl 3, nil);
 
     try
@@ -154,12 +165,47 @@ begin
 end;
 
 
+function ConfigurePluginForMemoryContent(AOnActionPlugin_InMemFS: TOnActionPlugin_InMemFS_Obj): Boolean; cdecl;
+const
+  CKeyFileName: string = 'Mem:\Key.txt';
+  CUseKeyFileName: string = 'Mem:\UseKey.txt';
+var
+  PluginInMemFS: TPluginInMemFileSystem;
+  UseKeyInfo: string;
+begin
+  Result := True;
+  FKeySet := False;  //init also here
+
+  PluginInMemFS := TPluginInMemFileSystem.Create;
+  try
+    if PluginInMemFS.FileExistsInMem(AOnActionPlugin_InMemFS, CUseKeyFileName) then
+    begin
+      SetLength(UseKeyInfo, PluginInMemFS.GetFileSize(AOnActionPlugin_InMemFS, CUseKeyFileName));
+      PluginInMemFS.LoadFileFromMem(AOnActionPlugin_InMemFS, CUseKeyFileName, @UseKeyInfo[1]);
+    end;
+
+    if UseKeyInfo = 'True' then
+      if PluginInMemFS.FileExistsInMem(AOnActionPlugin_InMemFS, CKeyFileName) then
+      begin
+        FKeySet := True;
+        //read key from file
+        SetLength(FKey, PluginInMemFS.GetFileSize(AOnActionPlugin_InMemFS, CKeyFileName));
+        PluginInMemFS.LoadFileFromMem(AOnActionPlugin_InMemFS, CKeyFileName, @FKey[1]);
+      end;
+  finally
+    PluginInMemFS.Free
+  end;
+end;
+
+
 exports
   GetAPIVersion,
   GetListOfProperties,
   ExecutePlugin,
-  ProcessMemoryContent;
+  ProcessMemoryContent,
+  ConfigurePluginForMemoryContent;
 
 begin
+  FKeySet := False;  //init again here
 end.
 
